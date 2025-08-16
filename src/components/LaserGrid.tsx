@@ -6,14 +6,12 @@ const LaserGrid = () => {
 
             <div><div className="left-0 right-0 h-2">
                 <div className="relative w-full h-full">
-                    {/* Main laser beam */}
                     <div
                         className="absolute inset-0 bg-red-500 opacity-90"
                         style={{
                             boxShadow: "0 0 20px #ef4444, 0 0 40px #ef4444, 0 0 60px #ef4444",
                         }}
                     />
-                    {/* Bright core */}
                     <div
                         className="absolute inset-0 bg-orange-300 opacity-70"
                         style={{
@@ -26,7 +24,6 @@ const LaserGrid = () => {
             </div>
             </div>
             <div className='flex justify-center'>
-                
             <img  className='w-full' src={grid_image}></img>
             </div>
         </div>

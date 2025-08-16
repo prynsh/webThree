@@ -1,7 +1,8 @@
-import realtech from "./assets/Realtech_Logo.png"
-import Aama from "./assets/38th_Image.png"
-import ssts from "./assets/SSTS_Image.png"
-import psycho from "./assets/Pyscho_Image.png"
+import realtech from "../assets/Realtech_Logo.png"
+import Aama from "../assets/38th_Image.png"
+import ssts from "../assets/SSTS_Image.png"
+import psycho from "../assets/Pyscho_Image.png"
+import nft from "../assets/nftgallery.jpg"
 interface LeaderboardItem {
   id: number
   name: string
@@ -14,7 +15,7 @@ export const galleryData = [
   {
     id: 1,
     title: "Mountain Landscape",
-    image: "",
+    image: nft,
     likes: 245,
     views: 1230,
     category: "Nature"
@@ -22,7 +23,7 @@ export const galleryData = [
   {
     id: 2,
     title: "Ocean Sunset",
-    image: "",
+    image: nft,
     likes: 189,
     views: 890,
     category: "Nature"
@@ -30,7 +31,7 @@ export const galleryData = [
   {
     id: 3,
     title: "City Architecture",
-    image: "",
+    image: nft,
     likes: 156,
     views: 765,
     category: "Architecture"
@@ -38,7 +39,7 @@ export const galleryData = [
   {
     id: 4,
     title: "Forest Path",
-    image: "",
+    image: nft,
     likes: 203,
     views: 1050,
     category: "Nature"
@@ -46,7 +47,7 @@ export const galleryData = [
   {
     id: 5,
     title: "Urban Night",
-    image: "",
+    image: nft,
     likes: 167,
     views: 820,
     category: "Urban"
@@ -54,7 +55,7 @@ export const galleryData = [
   {
     id: 6,
     title: "Desert Dunes",
-    image: "",
+    image: nft,
     likes: 134,
     views: 690,
     category: "Nature"
@@ -62,7 +63,7 @@ export const galleryData = [
   {
     id: 7,
     title: "Coastal Cliffs",
-    image: "",
+    image: nft,
     likes: 221,
     views: 1180,
     category: "Nature"
@@ -70,7 +71,7 @@ export const galleryData = [
   {
     id: 8,
     title: "Modern Building",
-    image: "",
+    image: nft,
     likes: 178,
     views: 940,
     category: "Architecture"

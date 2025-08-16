@@ -1,12 +1,11 @@
 import "./App.css"
-import Hero from "./Hero"
+import LandingPage from "./components/LandingPage"
 
 const App = () => {
   return (
-    <div>
-      <div className=""><Hero/>
-        </div>
-    </div>
+    <>
+      <div><LandingPage/></div>
+    </>
   )
 }
 
