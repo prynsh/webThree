@@ -20,7 +20,7 @@ function NFTCard({ title, image }: NFTCardProps) {
           target.nextElementSibling?.classList.remove("hidden");
         }}
       />
-      <div className="hidden absolute inset-0 flex items-center justify-center bg-gray-200">
+      <div className=" absolute inset-0 flex items-center justify-center bg-gray-200">
         <svg className="w-16 h-16 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
           <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2-.9 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
         </svg>
@@ -37,7 +37,7 @@ function NFTCard({ title, image }: NFTCardProps) {
 
 export default function NFTGallery() {
   return (
-    <div className="bg-gray-900 p-8 w-full">
+    <div className="bg-[#000D18] p-8 w-full">
       <div className=" mx-auto">
         {galleryData.reduce((rows: any[][], item, index) => {
           if (index % 4 === 0) rows.push([]); // start new row every 4 cards

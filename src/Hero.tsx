@@ -1,5 +1,3 @@
-import React from "react";
-import { RetroGrid } from "./components/magicui/retro-grid";
 import Topbar from "./components/Topbar";
 import HeroSike from "./components/Hero";
 import MarqueeComponent from "./components/Marquee";

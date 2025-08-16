@@ -1,3 +1,5 @@
+import StartGameButton from "./StartButton";
+
 export default function Home() {
   return (
     <main className=" relative flex items-center justify-center mx-30  min-w-[1147px] h-[648px] ">
@@ -10,16 +12,26 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 text-[0.5rem] p-2 text-white">///: <span className="text-[#21E786]">0.20</span></div>
+
 
       {/* Top Right Corner */}
-      <div className="absolute top-8 right-8  text-[0.5rem] text-right">
+      <div className="absolute top-8 right-8  text-[0.5rem] ">
         <div className="border-r-2 border-t-2  w-4 h-4 relative">
-          <div className="absolute top-2 right-2 flex-col">
-            <div className="flex"><span className="text-[#21E786]">10-08-2025 </span><span>:DATE</span></div>
-            <div className="flex"><span  className="text-[#21E786]">02:56:20</span> <span>:TIME</span></div>
-          </div>
+          <div className="absolute top-2 right-2 flex flex-col items-end whitespace-nowrap">
+            <div className="flex items-center">
+              <span className="text-[#21E786]">10-08-2025</span>
+              <span>:DATE</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[#21E786]">02:56:20</span>
+              <span>:TIME</span>
+            </div>
+            </div>
+
         </div>
       </div>
+      <div className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[0.5rem] p-2 text-white"><span className="text-[#21E786]">0.49</span> :\\\</div>
 
       {/* Bottom Left Corner */}
       <div className="absolute bottom-8 left-8 text-[0.5rem] text-[Orbitron]">
@@ -34,9 +46,13 @@ export default function Home() {
       {/* Bottom Right Corner */}
       <div className="absolute bottom-8 right-8  text-[0.5rem] text-right">
         <div className="border-r-2 border-b-2  w-4 h-4 relative">
-          <div className="absolute bottom-2 right-2 flex-col">
-            <div className=""><span className="text-[#21E786]">74.906:</span> <span>LOG</span></div>
-            <div className=""><span className="text-[#21E786]">Win11 Chrome/138.0.0.0</span><span> :SYS</span></div>
+          <div className="absolute bottom-2 right-2 flex flex-col items-end gap-1 whitespace-nowrap">
+            <div className="flex items-center gap-1">
+              <span className="text-[#21E786]">74.906</span>
+              <span>:LOG</span></div>
+            <div className="flex items-center gap-1">
+              <span className="text-[#21E786]">Win11 Chrome/138.0.0.0</span>
+              <span>:SYS</span></div>
           </div>
         </div>
       </div>
@@ -50,6 +66,10 @@ export default function Home() {
           A collection of 2525 highly-fashionable NFTs on the ETH Blockchain. Unique, <br/> metaverse-ready, and designed to
           benefit their holders.
         </p>
+        <div className="flex justify-center">
+
+        <StartGameButton/>
+        </div>
 
         {/* Start Game Button */}
         {/* <div className="pt-8">
