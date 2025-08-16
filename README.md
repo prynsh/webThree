@@ -1,69 +1,34 @@
-# React + TypeScript + Vite
+# NFT Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements a simple NFT gallery grid with hover interactions.  
+The focus was on **modularity** and **reusability**, so each piece of UI is built as a separate component that can be reused later.
+I haven't made it responsive and used the Image for the bottom grid as it is not interactive or has animations. If told, it can built very easily using the base from RetroGrid from MagicUI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Approach
 
-## Expanding the ESLint configuration
+### 1. Component-First Design
+- Created a reusable **`NFTCard`** component that:
+  - Displays an NFT image.
+  - Animates on hover (image zoom-in, border highlight, bottom action bar).
+  - Keeps logic isolated so the same card can be reused anywhere else.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Built an **`NFTGallery`** container that:
+  - Loops over data (`galleryData`) and splits items into rows of 4.
+  - Adds a **separator line** between rows for visual grouping.
+  - Handles layout (`grid` system with Tailwind).
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2. Styling & Hover Effects
+- Used **Tailwind CSS utility classes** for fast styling.
+- Added transitions for smooth hover animations:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. Reusability
+- The `NFTCard` is self-contained:
+  - Can be used in this gallery or in future pages (e.g., detail view, featured carousel).
+  - Supports fallback icons if images fail to load.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- The `NFTGallery`:
+  - Uses simple data mapping, easy to replace with API data later.
+  - Grid structure is reusable for any collection of items (not just NFTs).
